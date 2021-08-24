@@ -1,0 +1,21 @@
+[[package]]
+name = "pybind11"
+version = "2.7.1"
+description = "Seamless operability between C++11 and Python"
+category = "main"
+optional = false
+python-versions = "!=3.0,!=3.1,!=3.2,!=3.3,!=3.4,>=2.7"
+
+[package.extras]
+global = ["pybind11-global (==2.7.1)"]
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.6"
+content-hash = "45d46a2c46c2d0e5eef71407a7e0e519e89e21da95edf960fcba430409ac82b3"
+
+[metadata.files]
+pybind11 = [
+    {file = "pybind11-2.7.1-py2.py3-none-any.whl", hash = "sha256:34663b2a16e7ac6ae8b77fef13e2b135e9fbc5ec13d2505d34bd35b3a41b9d82"},
+    {file = "pybind11-2.7.1.tar.gz", hash = "sha256:8950aac5e5f4d505f7a0f067c5cb3893dcf098ff29cedfcb4ccf1e9e44d0bd9a"},
+]

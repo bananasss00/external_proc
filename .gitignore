@@ -1,0 +1,11 @@
+/build
+/.venv
+__pycache__
+/.idea
+/src/external_proc/build
+external_proc.egg-info
+/poetry_install_from_dist.cmd
+/dist
+/upload_pypi.cmd
+/upload_pypi_test.cmd
+/old.git.7z
