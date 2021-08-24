@@ -10,7 +10,7 @@ Ensure you have at least Python 3.6+
  ```
  pip install external_proc
  or
- pip install git+
+ pip install git+https://github.com/bananasss00/external_proc.git
  ```
  
 # Usage examples
