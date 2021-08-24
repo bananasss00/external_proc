@@ -129,4 +129,17 @@ adr = sig_in_code_section.go_call_ptr().get_address()
 # same for jmp, je and etc inctructions: .go_jmp_ptr(), .go_jmp_short_ptr()
 ```
  
-
+ 
+Shellcode injection. Using nasm(need add in to PATH environment variable directory with nasm.exe)
+```python
+    # CheatEngine Tutorial x64. Step 7: Code Injection: (PW=013370)
+    with ExtProcess.ctx_open('Tutorial-x86_64.exe') as t:
+        m = t.get_module()
+        code_decrement_health = 0x10002D4F7
+        new_code = t.alloc(2048, code_decrement_health)  # alloc memory near 'code_decrement_health'
+                                                                                   # for short relative jump!!!
+        t.virtual_protect(code_decrement_health, 7, PageFlags.PAGE_EXECUTE_READWRITE)
+        t.write.bytes(code_decrement_health, nasm(f'''jmp {hex(new_code)}\nnop\nnop''', 64, hex(code_decrement_health)))
+        t.write.bytes(new_code, nasm('''add dword [rsi+0x7E0], 0x2 ; +2 health instead -1
+                                        jmp qword 0x10002D4FE''', 64, new_code))
+```
