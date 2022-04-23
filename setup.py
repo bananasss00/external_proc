@@ -44,6 +44,7 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10'
     ],
     package_data={ 
         'external_proc': ["__init__.py", "_external_proc.pyi", "external_proc.py", "get_proc_x32.exe", "get_proc_x64.exe", ],
